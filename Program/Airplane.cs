@@ -47,9 +47,13 @@ namespace Sana05
         }
         public int GetTotalTime()
         {
-            return (FinishDate.Year - StartDate.Year) * 525600 + (FinishDate.Month - StartDate.Month) * 43800 + (FinishDate.Day - StartDate.Day) * 1440 + (FinishDate.Hours - StartDate.Hours) * 60 + FinishDate.Minutes - StartDate.Minutes;
+            DateTime startDateTime = new DateTime(StartDate.Year, StartDate.Month, StartDate.Day, StartDate.Hours, StartDate.Minutes, 0);
+            DateTime finishDateTime = new DateTime(FinishDate.Year, FinishDate.Month, FinishDate.Day, FinishDate.Hours, FinishDate.Minutes, 0);
+
+            TimeSpan totalTime = finishDateTime - startDateTime;
+            return (int)totalTime.TotalMinutes;
         }
-        public bool IsArrivingToday()
+            public bool IsArrivingToday()
         {
             if (StartDate.Day == FinishDate.Day)
                 return true;
