@@ -21,6 +21,7 @@ namespace Sana05
         public Currency(string name)
         {
             Name = name;
+            ExRate = 1;
         }   
         public Currency()
         {
