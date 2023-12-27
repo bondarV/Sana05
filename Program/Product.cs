@@ -12,7 +12,7 @@ namespace Sana05
         public string Name { get; set; }
 
         public float Price { get; set; }
-        Currency Cost { get; set; }
+        public Currency Cost { get; set; }
         public ushort Quantity { get; set; }
         public string Producer { get; set; }
         public float Weight { get; set; }
@@ -43,7 +43,6 @@ namespace Sana05
             Quantity = 1000;
             Producer = "Shop";
             Weight = 0;
-
         }
 
         public Product(Product obj)
@@ -64,12 +63,12 @@ namespace Sana05
         }
         public float GetTotalPriceInUAH()
         {
-            return Price * GetPriceInUAH();
+            return Quantity * GetPriceInUAH();
         }
 
-        public float GetTotalWeight(Product product)
+        public float GetTotalWeight()
         {
-            return product.Weight;
+            return Weight * Quantity;
         }
     }
 }
