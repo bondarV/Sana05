@@ -39,13 +39,13 @@ namespace Sana05
             Hours = hours;
             Minutes = minutes;
         }
-        public MyDate(MyDate obj)
+        public MyDate(MyDate mydate)
         {
-            Year = obj.Year;
-            Month = obj.Month;
-            Day = obj.Day;
-            Hours = obj.Hours;
-            Minutes = obj.Minutes;
+            Year = mydate.Year;
+            Month = mydate.Month;
+            Day = mydate.Day;
+            Hours = mydate.Hours;
+            Minutes = mydate.Minutes;
         }
     }
 }

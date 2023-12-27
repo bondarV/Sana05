@@ -45,14 +45,14 @@ namespace Sana05
             Weight = 0;
         }
 
-        public Product(Product obj)
+        public Product(Product product)
         {
-            Name = obj.Name;
-            Price = obj.Price;
-            Cost = obj.Cost;
-            Quantity = obj.Quantity;
-            Producer = obj.Producer;
-            Weight = obj.Weight;
+            Name = product.Name;
+            Price = product.Price;
+            Cost = new Currency(product.Cost);
+            Quantity = product.Quantity;
+            Producer = product.Producer;
+            Weight = product.Weight;
 
         }
         public float GetPriceInUAH()

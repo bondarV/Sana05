@@ -27,10 +27,10 @@ namespace Sana05
             Name = "USD";
             ExRate = 37.55F;
         }
-        public Currency(Currency obj)
+        public Currency(Currency currency)
         {
-            Name = obj.Name;
-            ExRate = obj.ExRate;
+            Name = currency.Name;
+            ExRate = currency.ExRate;
         }
     }
 }

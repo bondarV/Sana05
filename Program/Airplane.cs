@@ -38,12 +38,12 @@ namespace Sana05
             FinishDate = new MyDate();
         }
 
-        public Airplane(Airplane obj)
+        public Airplane(Airplane airplane)
         {
-            StartCity = obj.StartCity;
-            FinishCity = obj.FinishCity;
-            StartDate = new MyDate(obj.StartDate);
-            FinishDate = new MyDate(obj.FinishDate);
+            StartCity = airplane.StartCity;
+            FinishCity = airplane.FinishCity;
+            StartDate = new MyDate(airplane.StartDate);
+            FinishDate = new MyDate(airplane.FinishDate);
         }
         public int GetTotalTime()
         {
